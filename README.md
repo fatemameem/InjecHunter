@@ -49,7 +49,7 @@ Hackers exploit DLLs to inject unauthorized code, execute remote commands, or es
 - **False Positives**: 0 (Yes, zero!)  
 - **Accuracy**: 97%  
 
-![Confusion Matrix and Metrics](./images/metrics_screenshot.png)  
+![Confusion Matrix and Metrics](./images/f1_score.png)  
 
 ---
 
@@ -59,15 +59,16 @@ Hackers exploit DLLs to inject unauthorized code, execute remote commands, or es
 - Binary: **Lab12-01.exe**  
 - Malicious Sequence:  
   - **VirtualAllocEx** → **WriteProcessMemory** → **CreateRemoteThread**.  
-![Remote Thread Injection](./images/remote_thread_injection.jpeg)  
-
+![Remote Thread Injection](./images/remotethreadinjection.png)  
+![Remote Thread Injection](./images/remotethreadinjection-1.png)
+![Remote Thread Injection](./images/remotethreadinjection-2.png)
 ---
 
 ### **2️⃣ Privilege Escalation**  
 - Binary: **inject.exe**  
 - Malicious Sequence:  
   - **OpenProcessToken** → **AdjustTokenPrivileges** → **LoadLibraryA**.  
-![Privilege Escalation](./images/privilege_escalation.jpeg)  
+![Privilege Escalation](./images/privilege-escalation.png)  
 
 ---
 
@@ -75,14 +76,7 @@ Hackers exploit DLLs to inject unauthorized code, execute remote commands, or es
 - Binary: **rundll32.exe**  
 - Result:  
   - No suspicious sequences found.  
-![Benign Binary](./images/benign_binary_analysis.png)  
-
----
-
-## 🚧 Visual Logs  
-### Here’s What Detection Looks Like in Action  
-![Detected Suspicious Sequence](./images/suspicious_sequence_1.png)  
-- Detecting calls like **GetCurrentDirectoryA** → **OpenProcess** → **CreateRemoteThread**—classic injection signatures.  
+![Benign Binary](./images/benign.png)  
 
 ---
 
