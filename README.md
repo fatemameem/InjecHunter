@@ -96,11 +96,7 @@ Hackers exploit DLLs to inject unauthorized code, execute remote commands, or es
    ```bash
    git clone https://github.com/your-username/dll-injection-detection.git
    ```  
-2. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```  
-
+2. And start playing around with the scripts! 
 ---
 
 ## 🖥️ How to Use  
